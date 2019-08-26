@@ -16,4 +16,8 @@ import Vue from 'vue';
 
 //Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
-new Vue().$mount('#app');
+import router from './routes.js'
+
+new Vue({
+    router
+}).$mount('#app');
