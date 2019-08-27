@@ -17,7 +17,9 @@ import Vue from 'vue';
 //Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 import router from './routes.js'
+import store from './store.js'
 
 new Vue({
-    router
+    router,
+    store
 }).$mount('#app');
