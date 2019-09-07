@@ -15,13 +15,13 @@ class CreateCafesTable extends Migration
     {
         Schema::create('cafes', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
-            $table->text('address');
-            $table->string('city');
-            $table->string('state');
-            $table->string('zip');
-            $table->decimal('latitude', 11, 8);
-            $table->decimal('longitude', 11, 8);
+            $table->string('name')->default('');
+            $table->text('address')->nullable();
+            $table->string('city')->default('');
+            $table->string('state')->default('');
+            $table->string('zip')->default('');
+            $table->decimal('latitude', 11, 8)->default(0);
+            $table->decimal('longitude', 11, 8)->default(0);
             $table->timestamps();
         });
     }
